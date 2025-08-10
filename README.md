@@ -1,3 +1,4 @@
+````markdown
 # 🤖 Genesis Core – Modular AI Voice Assistant
 
 Genesis Core is a modular, intelligent voice assistant designed for automation and voice interaction with multiple AI agents.  
@@ -73,10 +74,13 @@ src/
 │   ├── tts_engine.py
 ├── config/
 │   └── prompts.yaml
-Class Diagram
-mermaid
-Copiar
-Editar
+````
+
+---
+
+### Class Diagram
+
+```mermaid
 classDiagram
     direction LR
     class SpeechListener { +listen() str }
@@ -105,10 +109,13 @@ classDiagram
     Main --> OfflineCommandRouter
     Main --> ActionExecutor
     Main --> TextToSpeechEngine
-Flow Diagram
-mermaid
-Copiar
-Editar
+```
+
+---
+
+### Flow Diagram
+
+```mermaid
 sequenceDiagram
     autonumber
     participant U as User
@@ -144,46 +151,53 @@ sequenceDiagram
     U->>SL: "deactivate"
     SL->>OCR: route "deactivate"
     OCR->>SM: deactivate agent (return to SR-only)
-📦 Libraries and Versioning
-Library	Version	Purpose
-SpeechRecognition	3.10.0	Google SR speech recognition
-pyttsx3	2.90	Offline text-to-speech
-PyYAML	6.0.1	YAML configuration handling
-httpx	0.27.0	API HTTP client
-pyaudio	0.2.13	Microphone audio capture
-python-dotenv	1.0.0	Load environment variables
-os (built-in)	-	OS operations
-pathlib (built-in)	-	Cross-platform path handling
+```
 
-Privacy Notice: Since Google Speech Recognition is used, audio (or transcriptions) are sent to external servers for text conversion — this happens from the moment the system is initialized.
+---
 
-⚙ Installation
-Clone the repository
+## 📦 Libraries and Versioning
 
-bash
-Copiar
-Editar
+| Library              | Version | Purpose                      |
+| -------------------- | ------- | ---------------------------- |
+| `SpeechRecognition`  | 3.10.0  | Google SR speech recognition |
+| `pyttsx3`            | 2.90    | Offline text-to-speech       |
+| `PyYAML`             | 6.0.1   | YAML configuration handling  |
+| `httpx`              | 0.27.0  | API HTTP client              |
+| `pyaudio`            | 0.2.13  | Microphone audio capture     |
+| `python-dotenv`      | 1.0.0   | Load environment variables   |
+| `os` (built-in)      | -       | OS operations                |
+| `pathlib` (built-in) | -       | Cross-platform path handling |
+
+> **Privacy Notice:** Since Google Speech Recognition is used, audio (or transcriptions) are sent to external servers for text conversion — this happens from the moment the system is initialized.
+
+---
+
+## ⚙ Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/yourusername/genesis-core.git
 cd genesis-core
-Create and activate a virtual environment
+```
 
-bash
-Copiar
-Editar
+### 2. Create and activate a virtual environment
+
+```bash
 python -m venv venv
 source venv/bin/activate     # Linux/Mac
 venv\Scripts\activate        # Windows
-Install dependencies
+```
 
-bash
-Copiar
-Editar
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Set your API key
+```
 
-bash
-Copiar
-Editar
+### 4. Set your API key
+
+```bash
 # Windows (CMD)
 set OPENROUTER_API_KEY=your_key_here
 
@@ -192,41 +206,51 @@ $env:OPENROUTER_API_KEY="your_key_here"
 
 # Linux/Mac
 export OPENROUTER_API_KEY="your_key_here"
-🚀 Usage
+```
+
+---
+
+## 🚀 Usage
+
 Run the assistant:
 
-bash
-Copiar
-Editar
+```bash
 python main.py
-Basic voice commands:
+```
 
-"protocol" → activate AI mode (default agent)
+### Basic voice commands:
 
-"change to assistant mode" → switch to Assistant Agent
+* `"protocol"` → activate AI mode (default agent)
+* `"change to assistant mode"` → switch to Assistant Agent
+* `"exit"` or `"deactivate"` → disable AI mode
+* Local commands like `"open browser"` available in all modes
 
-"exit" or "deactivate" → disable AI mode
+---
 
-Local commands like "open browser" available in all modes
+## 🤝 Contribution Guide
 
-🤝 Contribution Guide
 We welcome contributions!
 To contribute:
 
-Fork the repository
+1. Fork the repository
+2. Create a new branch:
 
-Create a new branch:
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Commit your changes:
 
-bash
-Copiar
-Editar
-git checkout -b feature/my-feature
-Commit your changes:
-
-bash
-Copiar
-Editar
-git commit -m "Add my feature"
-Push and submit a Pull Request
+   ```bash
+   git commit -m "Add my feature"
+   ```
+4. Push and submit a Pull Request
 
 For major changes, please open an issue to discuss before starting development.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
+
