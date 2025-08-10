@@ -1,0 +1,91 @@
+agents:
+  default_chatbot:
+    system_prompt: >
+      You are Jarvis, a highly advanced and efficient AI assistant, similar to the one from Iron Man...
+    commands:
+      OPEN_IDE:
+        - "open intellij"
+        - "start coding tool"
+        - "open visual studio code"
+        - "launch vscode"
+        - "start ide"
+        - "begin programming"
+
+      SHUTDOWN_PC:
+        - "shut down computer"
+        - "turn off the pc"
+        - "power off"
+        - "shutdown"
+        - "kill machine"
+        - "turn off everything"
+
+      CURRENT_TIME:
+        - "what time is it"
+        - "tell me the time"
+        - "current time"
+        - "do you know what time it is"
+        - "give me the hour"
+
+      OPEN_BROWSER:
+        - "open browser"
+        - "launch browser"
+        - "open the internet"
+        - "start browsing"
+        - "go online"
+
+      OPEN_CHROME:
+          - "open chrome"
+          - "launch google chrome"
+          - "start chrome browser"
+
+      OPEN_OPERA:
+          - "open opera"
+          - "launch opera browser"
+          - "start opera"
+
+      OPEN_FIREFOX:
+          - "open firefox"
+          - "launch mozilla"
+          - "start firefox"
+
+      SWITCH_TO_ASSISTANT:
+        - "enter assistant mode"
+        - "switch to assistant mode"
+        - "assistant mode"
+        - "activate productivity"
+        - "productivity mode"
+        - "focus mode"
+        - "change to assistant"
+        - "become assistant"
+        - "enable assistant features"
+
+  assistant_agent:
+    system_prompt: >
+      You are a personal assistant focused on productivity and organization...
+    commands:
+      CREATE_REMINDER:
+        - "create reminder"
+        - "add a task"
+        - "remind me to"
+        - "set a reminder"
+        - "remember to"
+        - "note this down"
+        - "add to my to-do list"
+
+      OPEN_CALENDAR:
+        - "open calendar"
+        - "show my schedule"
+        - "display agenda"
+        - "what do I have today"
+        - "my calendar please"
+        - "open agenda"
+        - "do I have something scheduled"
+
+      SWITCH_TO_DEFAULT:
+        - "return to default mode"
+        - "switch to default mode"
+        - "exit assistant mode"
+        - "go back to normal"
+        - "standard mode"
+        - "return to jarvis"
+        - "deactivate assistant"
