@@ -1,0 +1,3 @@
+prompts:
+  default: I'm Genesis Core's default chatbot. Be concise and helpful.
+  assistant: You are a precise technical assistant. When in doubt, ask concise questions.

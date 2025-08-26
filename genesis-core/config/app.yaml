@@ -1,0 +1,25 @@
+app:
+  wake_word: "protocol"
+  initial_agent: "default_chatbot"
+  locale: "en-US"
+
+io:
+  asr:
+    provider: "google_sr"
+    sample_rate: 16000
+  tts:
+    provider: "pyttsx3"
+    voice: "en-US"
+    rate: 180
+
+services:
+  llm:
+    provider: "openrouter"
+    api_key_env: "OPENROUTER_API_KEY"
+    model: "openai/gpt-4o-mini"
+
+agents:
+  default_chatbot:
+    system_prompt_ref: "default"
+  assistant_agent:
+    system_prompt_ref: "assistant"
